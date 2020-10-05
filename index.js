@@ -49,5 +49,15 @@ $("#new-phones .owl-carousel").owlCarousel({
 })
 
 $("#blogs .owl-carousel").owlCarousel({
-    
+    loop:true,
+    nav:false,
+    dots:false,
+    responsive: {
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+    }
 })
