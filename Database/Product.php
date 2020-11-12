@@ -21,5 +21,20 @@
 
             return $resultArray;
         }
+
+        // get product using item id
+        public function getProduct($item_id=null, $table="product"){
+            if(isset($item_id)){
+            $result = $this->db->con->query($query="SELECT * FROM {$table} WHERE item_id={$item_id}");
+            }
+
+            $resultArray = array();
+
+            while ($item = mysqli_fetch_array($result, $resulttype=MYSQLI_ASSOC)){
+                $resultArray[] = $item;
+            }
+
+            return $resultArray;
+        }
     }
 ?>
